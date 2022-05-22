@@ -7,10 +7,18 @@
 *::after {
     box-sizing: border-box;
 }
+h1 {
+    font-size: 3.75rem;
+    font-family: $font-header;
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    line-height: 1.2em;
+}
 html {
     color: $color-gray;
-    font-family: $font-main;
+    font-family: $font-main;    
     font-size: $font-size;
+    overflow-y: scroll;
 }
 
 a{

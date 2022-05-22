@@ -12,3 +12,8 @@ html {
     font-family: $font-main;
     font-size: $font-size;
 }
+
+a{
+    text-decoration: none;
+    color: $color-light;
+}

@@ -6,10 +6,7 @@
     align-items: center;
     justify-content: center;
     min-width: 250px;
-    height: 60px;
-    border: 2px solid $color-light;
     padding: 0.5em 1em;
-    background-color: rgba($color-light, 0.1);
     transition: background-color 0.5s;
 
     font-size: 1.125rem;
@@ -18,4 +15,17 @@
     &:focus {
         background-color: $color-accent;
     }
+}
+
+.btn--light{
+    min-width: 250px;
+    background-color: rgba($color-light, 0.1);
+    height: 60px;
+    border: 2px solid $color-light;
+}
+.btn--primary{
+    min-width: 350px;
+    background-color: rgba($color-primary   , 0.8);
+    height: 60px;
+    border: 2px solid $color-primary;
 }

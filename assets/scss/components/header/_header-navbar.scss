@@ -15,9 +15,7 @@
 
         @include unlist (0 (-$gap-sm) 0 0)
     }
-    &__item {
-    }
-
+    
     &__link{
         display: block;
         padding: $gap $gap-sm;
@@ -28,5 +26,4 @@
             color: $color-accent;
         }
     }
-   
 }

@@ -2,6 +2,22 @@
 @use "../../mixins" as *;
 
 
+@mixin min {
+    @media (min-width: $lg) {
+        @content;
+    }
+}
+@mixin lg-md {
+    @media (max-width: ($lg - 0.1px)) and (min-width: $md) {
+        @content;
+    }
+}
+@mixin md {
+    @media (max-width: ($md - 0.1px)) {
+        @content;
+    }
+}
+
 .header-content {
     position: relative;
     z-index: 1;
@@ -13,6 +29,17 @@
     &__title {
         text-align: center;
         margin: 0 0 53px;
+
+        @include lg-min {
+            margin: 0 0 53px;
+        }
+        @include lg-md {
+            margin: 0 0 43px;
+        }
+        @include md {
+            margin: 0 0 33px;
+        }
+      
     }
     &__actions {
         display: flex;

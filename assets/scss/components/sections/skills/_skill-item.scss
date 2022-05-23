@@ -3,25 +3,50 @@
 
 
 .skill-item {
+    overflow: hidden;
     position: relative;
     background-color: $color-primary;
     &__title {
         margin: 0;
+        @include abs-position;
+        z-index: 1;
+        font-size: 1.25rem;
+        letter-spacing: 0.1em;
+
     }
     &__link {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
         padding: $gap;
+        transition: color 0.5s;
     }
     &__image {
         background-image: url(../img/img-html.png);
         background-position: 50% 50%;
         background-size: cover;
-        @include abs-position
+        @include abs-position;
+        transition: transform 0.5s;
+
     }
     &__overlay{
         background-color: $color-primary;
         opacity: 0.8;
-        @include abs-position
+        @include abs-position;
+        transition: opacity 0.5s;
+
+    }
+    &:hover {
+        .skill-item__link {
+            color: $color-accent;
+        }
+        .skill-item__overlay {
+            opacity: 0.95;
+        }
+        .skill-item__image {
+            transform: scale(1.1);
+        }
     }
 }
 

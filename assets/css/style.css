@@ -531,7 +531,7 @@ a {
   gap: 10px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
-  grid-auto-rows: calc(33vh - 13.3333333333px);
+  grid-auto-rows: calc(33.33vh - 13.3333333333px);
 }
 .skills__actions {
   display: -webkit-box;
@@ -545,15 +545,36 @@ a {
 }
 
 .skill-item {
+  overflow: hidden;
   position: relative;
   background-color: #2d3651;
 }
 .skill-item__title {
   margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 1.25rem;
+  letter-spacing: 0.1em;
 }
 .skill-item__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
   padding: 20px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
 }
 .skill-item__image {
   background-image: url(../img/img-html.png);
@@ -564,6 +585,11 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 .skill-item__overlay {
   background-color: #2d3651;
@@ -573,6 +599,20 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+.skill-item:hover .skill-item__link {
+  color: #d66926;
+}
+.skill-item:hover .skill-item__overlay {
+  opacity: 0.95;
+}
+.skill-item:hover .skill-item__image {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .skill-item:nth-of-type(1) {

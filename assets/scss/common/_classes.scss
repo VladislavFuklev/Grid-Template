@@ -9,7 +9,6 @@
     padding: 0.5em 1em;
     transition: background-color 0.5s;
 
-    font-size: 1.125rem;
     letter-spacing: 0.1em;
     &:hover,
     &:focus {
@@ -20,6 +19,7 @@
 .btn--light{
     background-color: rgba($color-light, 0.1);
     @include lg-min {
+        font-size: 1.125rem;
         min-width: 250px;
         height: 60px;
     }
@@ -34,6 +34,7 @@
     border: 2px solid $color-light;
 }
 .btn--primary{
+    font-size: 1.125rem;
     height: 60px;
     @include sm-min {
         min-width: 350px;

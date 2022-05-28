@@ -13,7 +13,6 @@ $local-gap: calc(40px / 3);
     }
     &__container {
         display: grid;
-        grid-auto-rows: calc(33.33vh - $local-gap);
         
 
         @include lg-min {
@@ -31,14 +30,19 @@ $local-gap: calc(40px / 3);
         @include sm {
             grid-template-columns: 1fr;
             grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+            gap: $gap;
         } 
 
         @include sm-min {
             gap: $gap-sm;
         }
-        @include sm {
-            gap: $gap;
-        }
+        @media (min-height: 691px) {
+            grid-auto-rows: calc(33.33vh - $local-gap);
+        } 
+        @media (max-height: 690px) {
+            grid-auto-rows: calc(230px - ($local-gap));
+        } 
+        
     }
 
     &__actions {

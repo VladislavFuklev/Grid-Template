@@ -4,6 +4,9 @@
 .about {
   letter-spacing: 0.055em;
   background-color: $color-gray-light;
+  h2 {
+    margin-top: 0;
+  }
 
   @include lg-min {
     padding-top: $gap-x5;

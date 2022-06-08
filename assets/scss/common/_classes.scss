@@ -37,7 +37,7 @@
     font-size: 1.125rem;
     height: 60px;
     @include sm-min {
-        min-width: 350px;
+        width: 350px;
     }
     @include sm {
         width: 100%;

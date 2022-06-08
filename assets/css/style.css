@@ -767,32 +767,40 @@ input:focus {
 }
 
 .form {
+  padding: 30px 0;
   background-color: #2d3651;
-  padding: 30px 0px;
 }
 .form__container {
-  gap: 20px;
   display: grid;
+  gap: 20px;
+}
+.form .btn--primary {
+  width: 100%;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.form .btn--primary:hover, .form .btn--primary:focus {
+  cursor: pointer;
+  border-color: #ffffff;
+  background-color: #d66926;
 }
 .form-item__input {
   display: block;
   width: 100%;
   height: 60px;
-  margin: 0;
   padding-right: 30px;
   padding-left: 30px;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.2);
-  outline: none;
-  font-size: 1.125rem;
-  letter-spacing: 0.15em;
-  overflow: visible;
   -webkit-transition: background-color 0.5s, border-color 0.5s;
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 1.125rem;
 }
 .form-item__input::-webkit-input-placeholder {
   color: #637588;
@@ -810,8 +818,7 @@ input:focus {
   color: #637588;
 }
 .form-item__input:hover, .form-item__input:focus {
-  color: rgba(255, 255, 255, 0.5);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
   border-bottom-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.15);
 }
@@ -829,17 +836,6 @@ input:focus {
 }
 .form-item__input:hover::placeholder, .form-item__input:focus::placeholder {
   color: #8c9bab;
-}
-.form .btn--primary {
-  width: 100%;
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0);
-  border-bottom-color: rgba(255, 255, 255, 0.2);
-}
-.form .btn--primary:hover, .form .btn--primary:focus {
-  background-color: #d66926;
-  border-color: #ffffff;
 }
 .posts__title {
   margin-top: 0;
@@ -1014,7 +1010,7 @@ input:focus {
 }
 @media (min-width: 576px) {
   .btn--primary {
-    min-width: 350px;
+    width: 350px;
   }
   .skills {
     padding: 10px;
